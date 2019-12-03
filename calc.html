@@ -7,6 +7,19 @@
             {  
                 opacity: 1;
             }
+
+            .botoes
+            {
+                display: none !important;
+            }
+            
+            @media (max-width: 768px) 
+            {
+                .botoes
+                {
+                    display: inline !important;
+                }
+            }
       </style>
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
@@ -28,36 +41,51 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-8 col-4">
+            <div class="col-md-12 col-8">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Félsico</span>
                     </div>
-                    <input type="number" id="fe" class="form-control" min="0" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="number" id="fe" class="form-control tipos" min="0" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
-            <div class="col-md-4 col-2">
-                <button class="add btn btn-dark" style="height:100%">+</button>
+            <div class="col-md-1 col-1">
+                <button class="add btn btn-dark botoes bMais" id="femais" style="height:100%">+</button>
+            </div>
+            <div class="col-md-1 offset-1 col-1">
+                <button class="add btn btn-dark botoes bMenos" id="femenos" style="height:100%">-</button>
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-4">
+            <div class="col-md-12 col-8">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Máfico</span>
                     </div>
-                    <input type="number" id="ma" class="form-control" min="0" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="number" id="ma" class="form-control tipos" min="0" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
+            </div>
+            <div class="col-md-1 col-1">
+                <button class="add btn btn-dark botoes bMais" id="mafmais" style="height:100%">+</button>
+            </div>
+            <div class="col-md-1 offset-1 col-1">
+                <button class="add btn btn-dark botoes bMenos" id="mafmenos" style="height:100%">-</button>
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-4">
+            <div class="col-md-12 col-8">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Bioclasto</span>
                     </div>
-                    <input type="number" id="bi" class="form-control" min="0" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="number" id="bi" class="form-control tipos" min="0" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
+            </div>
+            <div class="col-md-1 col-1">
+                <button class="add btn btn-dark botoes bMais" id="biomais" style="height:100%">+</button>
+            </div>
+            <div class="col-md-1 offset-1 col-1">
+                <button class="add btn btn-dark botoes bMenos" id="biomenos" style="height:100%">-</button>
             </div>
         </div>
         <div class="row text-center">
@@ -66,7 +94,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Total</span>
                     </div>
-                    <input type="text" id="total" readonly value="0" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" id="totalGraos" readonly value="0" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
         </div>
@@ -78,63 +106,99 @@
         </div>
     
         <div class="row mt-5">
-            <div class="col-md-6 text-center">
+            <div class="col-md-12 col-8 text-center">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Muito Anguloso</span>
                     </div>
-                    <input type="number" id="mang" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="number" id="mang" class="form-control formas" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
+            </div>
+            <div class="col-md-1 col-1">
+                <button class="add btn btn-dark botoes bMais" id="mangmais" style="height:100%">+</button>
+            </div>
+            <div class="col-md-1 offset-1 col-1">
+                <button class="add btn btn-dark botoes bMenos" id="mangmenos" style="height:100%">-</button>
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-6 text-center">
+            <div class="col-md-12 col-8 text-center">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Anguloso</span>
                     </div>
-                    <input type="number" id="ang" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="number" id="ang" class="form-control formas" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
+            </div>
+            <div class="col-md-1 col-1">
+                <button class="add btn btn-dark botoes bMais" id="angmais" style="height:100%">+</button>
+            </div>
+            <div class="col-md-1 offset-1 col-1">
+                <button class="add btn btn-dark botoes bMenos" id="angmenos" style="height:100%">-</button>
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-6 text-center">
+            <div class="col-md-12 col-8 text-center">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Subanguloso</span>
                     </div>
-                    <input type="number" id="subang" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="number" id="subang" class="form-control formas" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
+            </div>
+            <div class="col-md-1 col-1">
+                <button class="add btn btn-dark botoes bMais" id="subangmais" style="height:100%">+</button>
+            </div>
+            <div class="col-md-1 offset-1 col-1">
+                <button class="add btn btn-dark botoes bMenos" id="subangmenos" style="height:100%">-</button>
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-6 text-center">
+            <div class="col-md-12 col-8 text-center">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Subarredondado</span>
                     </div>
-                    <input type="number" id="subarr" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="number" id="subarr" class="form-control formas" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
+            </div>
+            <div class="col-md-1 col-1">
+                <button class="add btn btn-dark botoes bMais" id="subarrmais" style="height:100%">+</button>
+            </div>
+            <div class="col-md-1 offset-1 col-1">
+                <button class="add btn btn-dark botoes bMenos" id="subarrmenos" style="height:100%">-</button>
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-6 text-center">
+            <div class="col-md-12 col-8 text-center">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Arredondado</span>
                     </div>
-                    <input type="number" id="arr" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="number" id="arr" class="form-control formas" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
+            </div>
+            <div class="col-md-1 col-1">
+                <button class="add btn btn-dark botoes bMais" id="arrmais" style="height:100%">+</button>
+            </div>
+            <div class="col-md-1 offset-1 col-1">
+                <button class="add btn btn-dark botoes bMenos" id="arrmenos" style="height:100%">-</button>
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-6 text-center">
+            <div class="col-md-12 col-8 text-center">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Bem Arredondado</span>
                     </div>
-                    <input type="number" id="barr" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="number" id="barr" class="form-control formas" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
+            </div>
+            <div class="col-md-1 col-1">
+                <button class="add btn btn-dark botoes bMais" id="barrmais" style="height:100%">+</button>
+            </div>
+            <div class="col-md-1 offset-1 col-1">
+                <button class="add btn btn-dark botoes bMenos" id="barrmenos" style="height:100%">-</button>
             </div>
         </div>
         <div class="row mt-5">
@@ -143,7 +207,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Total</span>
                     </div>
-                    <input type="text" id="total" readonly value="0" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" id="totalConta" readonly value="0" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
         </div>
@@ -158,12 +222,70 @@
     
     <script>
         $('input').on('change', function(){
+            calculaGraos();
+            calculaFormas();
+        });
+
+        $('.botoes').click(function(){
+            var input = $(this).parent().siblings().find('input');
+            
+            if(input.val() === "")
+            {
+                input.val(0);
+            }
+
+            if($(this).hasClass('bMais'))
+            {
+                input.val(parseInt(input.val()) + 1);
+            }
+            else
+            {
+                if(input.val() !== '0')
+                {
+                    input.val(parseInt(input.val()) - 1);
+                }
+            }
+            
+            calculaTotal();
+
+        });
+
+        function calculaTotal()
+        {
+            calculaGraos();
+            var y = $('#mang').val() * 0.145;
+            var y1 = $('#ang').val() * 0.210;
+            var y2 = $('#subang').val() * 0.300;
+            var y3 = $('#subarr').val() * 0.420;
+            var y4 = $('#arr').val() * 0.595;
+            var y5 = $('#barr').val() * 0.850;
+            var div = parseInt($('#totalGraos').val()) === 0 ? 1 : $('#totalGraos').val();
+
+            var soma = (y + y1 + y2 + y3 + y4 + y5) / div;
+
+            if(soma > 0)
+            {
+                $('#totalConta').val(soma);
+            }
+            else
+            {
+                $('#totalConta').val(0);
+            }
+
+        }
+
+        function calculaFormas()
+        {
+            calculaTotal();
+        }
+
+        function calculaGraos()
+        {
             var fe = !isNaN(parseInt($('#fe').val())) ? parseInt($('#fe').val()) : 0;
             var ma = !isNaN(parseInt($('#ma').val())) ? parseInt($('#ma').val()) : 0;
             var bi = !isNaN(parseInt($('#bi').val())) ? parseInt($('#bi').val()) : 0;
-
-            $('#total').val(fe + ma + bi);
-        });
+            $('#totalGraos').val(fe + ma + bi);
+        }
     </script>
 
   </body>
